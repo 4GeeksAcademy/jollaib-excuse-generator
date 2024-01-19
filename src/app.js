@@ -25,5 +25,4 @@ window.onload = function() {
 
   document.getElementById("excuse").innerText = excuse;
 
-  console.log("Hola");
 };
