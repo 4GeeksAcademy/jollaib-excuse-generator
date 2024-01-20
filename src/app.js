@@ -16,14 +16,17 @@ window.onload = function() {
     "during my lunch",
     "while I was praying"
   ];
-  let whoExcuse = who[Math.floor(Math.random() * who.length)];
-  let actionExcuse = action[Math.floor(Math.random() * action.length)];
-  let whatExcuse = what[Math.floor(Math.random() * what.length)];
-  let whenExcuse = when[Math.floor(Math.random() * when.length)];
+
+  function generateRandExcuse(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  let whoExcuse = generateRandExcuse(who);
+  let actionExcuse = generateRandExcuse(action);
+  let whatExcuse = generateRandExcuse(what);
+  let whenExcuse = generateRandExcuse(when);
   let excuse =
     whoExcuse + " " + actionExcuse + " " + whatExcuse + " " + whenExcuse + ".";
 
   document.getElementById("excuse").innerText = excuse;
-
-  console.log("Hola");
 };
